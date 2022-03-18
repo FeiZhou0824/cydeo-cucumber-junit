@@ -5,10 +5,7 @@ In this calss we will be able to pass pre @post -conditions to each scenario and
  */
 
 import com.cydeo.utilities.Driver;
-import io.cucumber.java.After;
-import io.cucumber.java.AfterStep;
-import io.cucumber.java.Before;
-import io.cucumber.java.BeforeStep;
+import io.cucumber.java.*;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -28,9 +25,16 @@ public class Hooks {
         System.out.println("===== this will only apply to scenarios with @db tag");
     }
     @After
-    public void teardownScenario(){
+    public void teardownScenario(Scenario scenario){
 
-        byte[] screenshot = ((TakesScreenshot)Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+        // scenario.isFailed()==? if scenario fails this method will return True boolean value
+        if(scenario.isFailed()){
+            byte[] screenshot = ((TakesScreenshot)Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+            scenario.attach(screenshot,"image/png",scenario.getName());
+        }
+
+
+
         Driver.closeDriver();
        // System.out.println("===Closing browser using cucumber @After");
         //System.out.println("===Scenario ended/ Take screenshot if failed");
