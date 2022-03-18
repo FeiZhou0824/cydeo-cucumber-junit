@@ -39,4 +39,8 @@ public class Wiki_step_definition {
 
         Assert.assertTrue(wikiSearchPage.mainHeader.getText().equals(string));
     }
+
+    @Then("user see  {string} in the wiki title")
+    public void userSeeInTheWikiTitle(String arg0) {
+    }
 }
