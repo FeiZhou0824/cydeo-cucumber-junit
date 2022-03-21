@@ -42,5 +42,6 @@ public class Wiki_step_definition {
 
     @Then("user see  {string} in the wiki title")
     public void userSeeInTheWikiTitle(String arg0) {
+
     }
 }
