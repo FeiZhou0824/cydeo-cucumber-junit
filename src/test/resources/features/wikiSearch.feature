@@ -1,6 +1,6 @@
 Feature: Wikipedia search functionality and verification
 
- #WSF-45234
+ #WSF-45234-->potential jira ticket number
   Scenario: Wikipedia Search Functionality Title Verification
   Given User is on Wikipedia home page
   When User types "Elon Musk" in the wiki search box
