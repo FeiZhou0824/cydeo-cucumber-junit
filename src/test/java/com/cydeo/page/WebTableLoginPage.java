@@ -27,7 +27,7 @@ public class WebTableLoginPage {
      *
      * Username:Test
      * Password:Tester
-     */
+A     */
     public void login(){
         this.inputUserName.sendKeys("Test");
         this.inputPassword.sendKeys("Tester");

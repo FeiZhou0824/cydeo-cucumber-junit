@@ -1,7 +1,13 @@
 package com.cydeo.step_definitions;
 
+import com.cydeo.page.Task6DropDownPage;
+import com.cydeo.utilities.Driver;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.openqa.selenium.support.ui.Select;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class DataTable_Definition {
@@ -11,5 +17,12 @@ public class DataTable_Definition {
         System.out.println(fruits);
         System.out.println(fruits.get(1));
     }
+
+
+
+
+
+
+
 
 }
