@@ -1,11 +1,13 @@
 package com.cydeo.step_definitions;
 
 import com.cydeo.page.Task6DropDownPage;
+import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.ArrayList;
@@ -22,13 +24,13 @@ public class Task6_dataTable_stepDefinitions {
     }
 
     @Then("User should see below info in month dropdown")
-    public void user_should_see_below_info_in_month_dropdown(List<String> month) {
-        Select allMonth = new Select(task6DropDownPage.monthDropDown);
-        task6DropDownPage.monthDropDown.click();
+    public void user_should_see_below_info_in_month_dropdown(List<String> expectedMonth) {
+        List<String> actualMonths = BrowserUtils.dropdownOptionsAsString(task6DropDownPage.monthDropDown);
 
-        List<String> allMonthText = new ArrayList<>();
-        allMonthText = Collections.singletonList(task6DropDownPage.monthDropDown.getText());
-       // System.out.println(month);
+        Assert.assertEquals(expectedMonth,actualMonths);
+        //Assert will check the size of the lists first, If it is matching it will check content 1 by 1.
+
+
 
 
 
