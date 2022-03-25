@@ -1,2 +1,0 @@
-file:src/test/resources/features/EtsyVerification.feature:9:15
-file:src/test/resources/features/webTableOrder.feature:41

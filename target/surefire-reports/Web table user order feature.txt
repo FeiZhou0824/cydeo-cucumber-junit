@@ -1,7 +1,0 @@
--------------------------------------------------------------------------------
-Test set: Web table user order feature
--------------------------------------------------------------------------------
-Tests run: 12, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 149.654 s <<< FAILURE! - in Web table user order feature
-Web table user order feature.User should be able to place order and order seen in web table #2  Time elapsed: 17.84 s  <<< FAILURE!
-org.junit.ComparisonFailure: expected:<Marie [Curie]> but was:<Marie [ghghj]>
-
